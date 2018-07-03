@@ -1,0 +1,15 @@
+  <div id="container" class="clearfix">
+    <input 
+        class="input"
+        #input
+        placeholder="请输入城市名称"
+        [(ngModel)]="test"
+        (ngModelChange)="handleChange($event)"
+    >
+    <a class="arrowBot" (click)="toggleList()"></a>
+  </div>
+  <div id="list" *ngIf="searchList">
+    <ul (click)="listClick($event)">
+      <li class="list-li" *ngFor="let citys of searchList">{{citys}}</li>
+    </ul>
+  </div>
