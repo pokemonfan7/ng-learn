@@ -1,0 +1,5 @@
+<form [formGroup]="form" (ngSubmit)="submitForm(form.value)">
+  <label for="kk">控制台输出:</label>
+  <input id="kk" type="text" formControlName="value" autocomplete="off">
+  <button type="submit" [disabled]="form.invalid">确认</button>
+</form>
