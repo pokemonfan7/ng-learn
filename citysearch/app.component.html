@@ -10,6 +10,6 @@
   </div>
   <div id="list" *ngIf="searchList">
     <ul (click)="listClick($event)">
-      <li class="list-li" *ngFor="let citys of searchList">{{citys}}</li>
+      <li class="list-li" *ngFor="let citys of searchList" [innerHtml]="citys | strong:test"></li>
     </ul>
   </div>

@@ -7,10 +7,6 @@ ul {
     padding:0;
     list-style:none;
   }
-  strong {
-    font-weight:normal;
-    color:red;
-  }
   .clearfix:after{
     content: "";
     display: block;

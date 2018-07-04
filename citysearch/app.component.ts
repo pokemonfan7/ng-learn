@@ -23,9 +23,9 @@ export class AppComponent {
   listClick(e) {
       const target = e.target;
       if (target.nodeName.toLowerCase() === 'li') {
-          this.test = target.innerHTML;
+          this.test = target.innerHTML.replace(/<.+?>/gim,'');
       } else if (target.nodeName.toLowerCase() === 'strong') {
-          this.test = target.parentNode.innerHTML;
+          this.test = target.parentNode.innerHTML.replace(/<.+?>/gim,'');
       }
       this.searchList = null;
   }
